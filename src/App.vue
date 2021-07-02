@@ -4,7 +4,7 @@
     <img src="@/assets/portada.jpg" alt="portada" />
   </section>
   <section class="message">
-    <h3>Lunes 25 de Enero del 2021</h3>
+    <h3>{{ resolvedDate }}</h3>
     <h2>Hoy tiene 1 Cita</h2>
   </section>
   <router-view />
@@ -19,6 +19,17 @@ export default {
   components: {
     Header,
     Footer,
+  },
+  computed: {
+    resolvedDate() {
+      let formatDate = new Date(new Date()).toLocaleDateString(undefined, {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+      return formatDate;
+    },
   },
 };
 </script>
