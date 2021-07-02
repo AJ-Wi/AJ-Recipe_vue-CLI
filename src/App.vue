@@ -1,13 +1,24 @@
 <template>
   <Header />
+  <section class="banner">
+    <img src="@/assets/portada.jpg" alt="portada" />
+  </section>
+  <section class="message">
+    <h3>Lunes 25 de Enero del 2021</h3>
+    <h2>Hoy tiene 1 Cita</h2>
+  </section>
   <router-view />
+  <Footer />
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+
 export default {
   components: {
     Header,
+    Footer,
   },
 };
 </script>
@@ -15,11 +26,11 @@ export default {
 <style>
 :root {
   /*********** Colors ************/
-  --primary-color: #008afc;
-  --second-color: #67bd31;
+  --primary-color: #1464e6;
+  --second-color: #00ff00;
   --bg: #fbfbfe;
   --bg-container: var(--bg);
-  --bg-button: var(--primary-color);
+  --bg-button: #32c8e6;
   --bg-list: var(--primary-color);
   --border-list: var(--second-color);
   --bg-border: #d2d2d2;
@@ -69,8 +80,28 @@ body {
 
 #app {
   display: grid;
-  grid-template-areas:
-    "site-header"
-    "site-content";
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 140px 60px 1fr 60px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+img {
+  width: 100%;
+}
+
+.banner img {
+  height: 140px;
+  object-fit: cover;
+}
+
+.message {
+  background-color: var(--bg-button);
+  display: grid;
+  place-items: center;
 }
 </style>
