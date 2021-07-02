@@ -21,7 +21,7 @@ export default {
 <style>
 #site-header {
   background-color: var(--primary-color);
-  padding: 0 20px;
+  padding: 0 15px;
   display: flex;
   position: sticky;
   top: 0;
