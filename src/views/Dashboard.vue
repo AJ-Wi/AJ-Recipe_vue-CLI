@@ -31,4 +31,10 @@ export default {
   padding: 15px;
   gap: 15px;
 }
+
+@media (min-width: 419px) {
+  #dashboard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 </style>
