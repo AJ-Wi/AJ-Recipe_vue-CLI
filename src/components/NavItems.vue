@@ -1,12 +1,20 @@
 <template>
-  <router-link :to="link" class="nav-item">
+  <router-link v-if="type === 'items'" :to="link" class="nav-item">
     <div :id="id" class="nav-icon">
       <svg viewBox="0 0 48 48">
-        <path :id="icon" :d="iconLoad()" />
+        <path :d="iconLoad()" />
       </svg>
     </div>
     <span class="nav-title">{{ title }}</span>
   </router-link>
+  <div v-else class="nav-btn">
+    <div id="menu" class="nav-icon">
+      <svg viewBox="0 0 48 48">
+        <path :d="iconLoad()" />
+      </svg>
+    </div>
+    <span class="nav-title"></span>
+  </div>
 </template>
 
 <script>
@@ -18,20 +26,18 @@ export default {
       type: String,
       default: "/",
     },
-    rute: {
-      type: String,
-    },
     title: {
       type: String,
+      default: "Enfermedades",
     },
-    icon: {
+    type: {
       type: String,
-      default: "service",
+      default: "items",
     },
   },
   methods: {
     iconLoad() {
-      return Icons[this.icon];
+      return Icons[this.title];
     },
   },
 };
@@ -51,17 +57,17 @@ export default {
 svg {
   width: 2rem;
   height: 2rem;
-  fill: var(--second-color);
+  fill: var(--first-color);
   cursor: pointer;
 }
 
 .nav-title {
-  color: var(--second-color);
+  color: var(--first-color);
   font-size: 0.6rem;
 }
 
 .nav-item.is-active {
-  background-color: var(--second-color);
+  background-color: var(--first-color);
 }
 
 .nav-item.is-active svg {
@@ -73,7 +79,7 @@ svg {
 }
 
 .nav-item:hover {
-  background-color: var(--second-color);
+  background-color: var(--first-color);
 }
 
 .nav-item:hover svg {

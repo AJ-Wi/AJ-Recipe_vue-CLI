@@ -1,17 +1,17 @@
 <template>
   <Header />
-  <NavBarDesktop />
+  <NavBar />
   <router-view />
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
-import NavBarDesktop from "@/components/NavBarDesktop.vue";
+import NavBar from "@/components/NavBar.vue";
 
 export default {
   components: {
     Header,
-    NavBarDesktop,
+    NavBar,
   },
   computed: {
     resolvedDate() {
@@ -30,8 +30,8 @@ export default {
 <style>
 :root {
   /*********** Colors ************/
-  --primary-color: #1464e6;
-  --second-color: #00ff00;
+  --first-color: #00ff00;
+  --second-color: #1464e6;
   --blue-soft: #32c8e6;
   --bg: #fbfbfe;
   --bg-button: #32c8e6;
