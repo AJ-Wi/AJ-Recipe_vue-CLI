@@ -2,19 +2,16 @@
   <Header />
   <NavBarDesktop />
   <router-view />
-  <NavBarMobil />
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
 import NavBarDesktop from "@/components/NavBarDesktop.vue";
-import NavBarMobil from "@/components/NavBarMobil.vue";
 
 export default {
   components: {
     Header,
     NavBarDesktop,
-    NavBarMobil,
   },
   computed: {
     resolvedDate() {

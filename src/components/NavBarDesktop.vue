@@ -1,39 +1,38 @@
 <template>
-  <nav class="navbar-desktop" :class="{ 'is-open': navBarOpen }">
-    <section class="nav-main">
-      <NavItems
-        @click="isClose"
-        :rute="require(`@/assets/enfermedades.svg`)"
-        title="Enfermedades"
-      />
-      <NavItems
-        @click="isClose"
-        :rute="require(`@/assets/dietas2.svg`)"
-        title="Dietas"
-      />
-      <NavItems
-        @click="isClose"
-        :rute="require(`@/assets/terapias.svg`)"
-        title="Terapias"
-      />
-      <NavItems
-        @click="isClose"
-        :rute="require(`@/assets/consejos.svg`)"
-        title="Consejos"
-      />
-    </section>
-    <section class="nav-config">
-      <NavItems
-        @click="isClose"
-        :rute="require(`@/assets/medico.svg`)"
-        title="Usuario"
-      />
-      <NavItems
-        @click="isClose"
-        :rute="require(`@/assets/config.svg`)"
-        title="Configuración"
-      />
-    </section>
+  <nav class="nav-bar" :class="{ 'is-open': navBarOpen }">
+    <NavItems
+      data-order="1"
+      @click="isClose"
+      :rute="require(`@/assets/enfermedades.svg`)"
+      title="Enfermedades"
+    />
+    <NavItems
+      @click="isClose"
+      :rute="require(`@/assets/dietas2.svg`)"
+      title="Dietas"
+    />
+    <NavItems
+      @click="isClose"
+      :rute="require(`@/assets/terapias.svg`)"
+      title="Terapias"
+    />
+    <NavItems
+      @click="isClose"
+      :rute="require(`@/assets/consejos.svg`)"
+      title="Consejos"
+    />
+    <NavItems
+      @click="isClose"
+      :rute="require(`@/assets/medico.svg`)"
+      title="Usuario"
+      class="nav-config"
+    />
+    <NavItems
+      @click="isClose"
+      :rute="require(`@/assets/config.svg`)"
+      title="Configuración"
+      class="nav-config"
+    />
   </nav>
 </template>
 
@@ -59,38 +58,35 @@ export default {
 </script>
 
 <style>
-.navbar-desktop {
+.nav-bar {
+  display: flex;
+  width: 100%;
+  height: 3.5rem;
+  background-color: var(--primary-color);
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+
+.nav-config {
   display: none;
 }
 
-@media (min-width: 959px) {
-  .navbar-desktop {
-    position: sticky;
-    top: 60px;
-    display: flex;
+@media (min-width: 768px) {
+  .nav-bar {
     flex-direction: column;
-    justify-content: space-between;
-    width: 220px;
-    margin-left: -160px;
-    min-height: calc(100vh - 60px);
-    background-color: var(--primary-color);
-    border-top: 1px solid var(--second-color);
-    border-right: 1px solid var(--second-color);
-    transition: all 0.5s;
+    justify-content: flex-start;
+    width: 12rem;
+    height: 100vh;
+    transition: all 0.5s ease;
+    position: sticky;
+    top: 0px;
+    left: 0px;
   }
 
-  .nav-item {
-    grid-template-columns: 160px 60px;
-  }
-
-  .nav-item .nav-title {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    text-align: end;
-  }
-
-  .navbar-desktop.is-open {
-    margin-left: 0;
+  .nav-config {
+    display: block;
   }
 }
 </style>
