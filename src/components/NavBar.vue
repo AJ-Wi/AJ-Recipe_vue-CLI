@@ -1,7 +1,7 @@
 <template>
   <nav class="nav-bar" :class="{ close: close }">
     <section class="nav-main">
-      <NavItems @click="isClose" title="menu" type="menu" />
+      <btnMenu @click="isClose" />
       <NavItems title="Enfermedades" class="is-active" />
       <NavItems title="Dietas" />
       <NavItems title="Terapias" />
@@ -16,11 +16,13 @@
 
 <script>
 import NavItems from "@/components/NavItems.vue";
+import btnMenu from "@/components/BtnMenu.vue";
 
 export default {
   name: "NavBar",
   components: {
     NavItems,
+    btnMenu,
   },
   data() {
     return {
@@ -55,10 +57,6 @@ export default {
   justify-content: space-around;
 }
 
-.nav-bar .nav-btn {
-  display: none;
-}
-
 .nav-config {
   display: none;
 }
@@ -77,11 +75,6 @@ export default {
 
   .nav-bar .nav-main {
     display: block;
-  }
-
-  .nav-bar .nav-btn {
-    display: block;
-    padding: 0.25rem;
   }
 
   .nav-config {

@@ -1,14 +1,11 @@
 <template>
-  <button
-    class="hamburger"
+  <div
+    class="btn-menu"
     :class="{ 'is-active': active }"
-    type="button"
     @click="active = !active"
   >
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-  </button>
+    <span class="btn-icon"></span>
+  </div>
 </template>
 
 <script>
@@ -23,65 +20,62 @@ export default {
 </script>
 
 <style scoped>
-.hamburger {
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
+.btn-menu {
+  display: none;
 }
 
-.hamburger:hover {
-  opacity: 0.7;
-}
+@media (min-width: 768px) {
+  .btn-menu {
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0.4rem;
+  }
 
-.hamburger-box {
-  position: relative;
-}
+  .btn-icon {
+    display: block;
+    background-color: var(--first-color);
+    transition-duration: 0.2s;
+  }
 
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px;
-  background-color: var(--second-color);
-  transition-duration: 0.2s;
-}
+  .btn-icon,
+  .btn-icon::before,
+  .btn-icon::after {
+    width: 100%;
+    height: 0.25rem;
+    /*border-radius: 4px;*/
+  }
 
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-  width: 40px;
-  height: 4px;
-  border-radius: 4px;
-  position: absolute;
-}
+  .btn-icon::before,
+  .btn-icon::after {
+    content: "";
+    display: block;
+    background-color: inherit;
+  }
 
-.hamburger-inner::before,
-.hamburger-inner::after {
-  content: "";
-  display: block;
-  background-color: inherit;
-}
+  .btn-icon::before {
+    margin-top: -0.65rem;
+  }
 
-.hamburger-inner::before {
-  top: -10px;
-}
+  .btn-icon::after {
+    margin-top: 1rem;
+  }
 
-.hamburger-inner::after {
-  bottom: -10px;
-}
+  /*********** Active State ***************/
 
-/*********** Active State ***************/
+  .btn-menu.is-active .btn-icon {
+    transform: rotate(45deg);
+  }
 
-.hamburger.is-active .hamburger-inner {
-  transform: rotate(765deg);
-  background-color: var(--second-color);
-}
+  .btn-menu.is-active .btn-icon::before {
+    opacity: 0;
+  }
 
-.hamburger.is-active .hamburger-inner::before {
-  opacity: 0;
-}
-
-.hamburger.is-active .hamburger-inner::after {
-  bottom: 0;
-  transform: rotate(90deg);
+  .btn-menu.is-active .btn-icon::after {
+    transform: rotate(90deg);
+    margin-top: 0.4rem;
+  }
 }
 </style>
