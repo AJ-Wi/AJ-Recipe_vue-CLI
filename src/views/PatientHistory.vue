@@ -1,5 +1,5 @@
 <template>
-  <main id="patient">
+  <article id="patient">
     <section class="patient-info">
       <div class="patient-img">
         <img src="@/assets/paciente.svg" alt="paciente" />
@@ -17,7 +17,7 @@
       </div>
     </section>
     <section class="patient-History"></section>
-  </main>
+  </article>
 </template>
 
 <script>
