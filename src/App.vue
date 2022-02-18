@@ -1,7 +1,9 @@
 <template>
-  <Header />
   <NavBar />
-  <router-view />
+  <main>
+    <Header />
+    <router-view />
+  </main>
 </template>
 
 <script>
@@ -31,53 +33,30 @@ export default {
 :root {
   /*********** Colors ************/
   --first-color: #00ff00;
+  --first-alpha-color: rgba(0, 255, 0, 0.75);
   --second-color: #1464e6;
-  --blue-soft: #32c8e6;
-  --bg: #fbfbfe;
-  --bg-button: #32c8e6;
-  --text-color: #000000;
-  --border-color: #898989;
-
-  /********** sizes **************/
-  --height-header: 60px;
-  --container-width: 1200px;
+  --second-alpha-color: rgba(20, 100, 230, 0.75);
+  --third-color: #501464;
+  --third-alpha-color: rgba(80, 20, 100, 0.75);
+  --bg-color: #fff;
+  --header-height: 4rem;
+  --max-width: 1200px;
+  --font: "Raleway", sans-serif;
   --font-size: 16px;
-  --main-font: Avenir, Helvetica, Arial, sans-serif;
-}
-
-/************ reset **************/
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  overflow-x: hidden;
-  background-color: var(--bg);
-  color: var(--text-color);
-  font-size: var(--font-size);
-  font-family: var(--main-font);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  text-decoration: none;
-  color: var(--second-color);
-}
-
-img {
-  width: 100%;
 }
 
 #app {
-  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  margin: 3rem 0 0 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-left: -3rem;
+  }
 }
 </style>
