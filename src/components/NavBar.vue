@@ -2,8 +2,9 @@
   <nav class="nav-bar" :class="{ close: close }">
     <section class="nav-main">
       <btnMenu @click="isClose" />
-      <NavItems title="Enfermedades" class="is-active" />
-      <NavItems title="Dietas" />
+      <NavItems title="Historias" class="is-active" />
+      <NavItems title="Enfermedades" link="/about" class="order" />
+      <NavItems title="Dietas" class="order" />
       <NavItems title="Terapias" />
       <NavItems title="Consejos" />
     </section>
@@ -49,6 +50,10 @@ export default {
   position: fixed;
   bottom: 0;
   z-index: 999;
+}
+
+.order {
+  order: -1;
 }
 
 .nav-bar .nav-main {
