@@ -40,7 +40,7 @@ export default {
   display: none;
 }
 
-@media (min-width: 719px) {
+@media (min-width: 768px) {
   .btn {
     min-width: 150px;
   }
