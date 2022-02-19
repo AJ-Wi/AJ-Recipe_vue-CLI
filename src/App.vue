@@ -50,13 +50,6 @@ export default {
 }
 
 main {
-  margin: 3rem 0 0 0;
   width: 100%;
-}
-
-@media (min-width: 768px) {
-  main {
-    margin-left: -3rem;
-  }
 }
 </style>
