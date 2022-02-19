@@ -31,11 +31,16 @@ export default {
 </script>
 
 <style>
+#patient {
+  margin-top: 3rem;
+  padding-top: 0.01rem;
+}
+
 .patient-info {
   display: flex;
-  margin: 15px;
+  margin: 1rem;
   padding: 15px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--gray-color);
   border-radius: 3px;
   gap: 15px;
 }
@@ -52,17 +57,11 @@ export default {
 }
 
 .patient-info .patient-data h2 {
-  color: var(--blue-soft);
+  color: var(--link-color);
   font-size: 1rem;
 }
 
 .patient-info .patient-button {
   justify-items: end;
-}
-
-@media (min-width: 959px) {
-  #patient {
-    margin-left: 60px;
-  }
 }
 </style>
