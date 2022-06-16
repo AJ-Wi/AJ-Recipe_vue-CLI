@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35E75A31-05DF-4A2F-8EDE-EE467D0E7098}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Recipe.My.MyApplication</StartupObject>
+    <RootNamespace>Recipe</RootNamespace>
+    <AssemblyName>Recipe</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Recipe.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Recipe.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Recipe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Actualizar">
+      <HintPath>..\..\Actualizar\Actualizar\bin\Debug\Actualizar.exe</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebCAM">
+      <HintPath>..\..\Ejemplos\Camara\WebCAM.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmCamara.Designer.vb">
+      <DependentUpon>FrmCamara.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCamara.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImagen.Designer.vb">
+      <DependentUpon>FrmImagen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImagen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAcecade.Designer.vb">
+      <DependentUpon>FrmAcecade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAcecade.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpresa.Designer.vb">
+      <DependentUpon>FrmEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImprimir.Designer.vb">
+      <DependentUpon>FrmImprimir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImprimir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicio.Designer.vb">
+      <DependentUpon>FrmInicio.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListar.Designer.vb">
+      <DependentUpon>FrmListar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarCC.Designer.vb">
+      <DependentUpon>FrmIngresarCC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresarCC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPacientes.Designer.vb">
+      <DependentUpon>FrmPacientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPacientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecipe.Designer.vb">
+      <DependentUpon>FrmRecipe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecipe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrar.Designer.vb">
+      <DependentUpon>FrmRegistrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTransferir.Designer.vb">
+      <DependentUpon>FrmTransferir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTransferir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.vb">
+      <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIPrincipal.Designer.vb">
+      <DependentUpon>MDIPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModLicencia.vb" />
+    <Compile Include="ModVariables.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmCamara.resx">
+      <DependentUpon>FrmCamara.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTransferir.resx">
+      <DependentUpon>FrmTransferir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptRecipeImagen.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImagen.resx">
+      <DependentUpon>FrmImagen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAcecade.resx">
+      <DependentUpon>FrmAcecade.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpresa.resx">
+      <DependentUpon>FrmEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImprimir.resx">
+      <DependentUpon>FrmImprimir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInicio.resx">
+      <DependentUpon>FrmInicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListar.resx">
+      <DependentUpon>FrmListar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarCC.resx">
+      <DependentUpon>FrmIngresarCC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPacientes.resx">
+      <DependentUpon>FrmPacientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecipe.resx">
+      <DependentUpon>FrmRecipe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrar.resx">
+      <DependentUpon>FrmRegistrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptRecipe.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Resources\SubirBD.gif" />
+    <Content Include="Recipe.ico" />
+    <None Include="Resources\RecipePublicKey.xml" />
+    <EmbeddedResource Include="RptRecipeDietas.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\Paciente.png" />
+    <None Include="Resources\Guardar.jpg" />
+    <None Include="Resources\FondoBienvenida.png" />
+    <Content Include="RptRecipeLegal.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Recipe.Entities.ConsejosEntity.datasource" />
+    <None Include="My Project\DataSources\Recipe.Entities.DietasEntity.datasource" />
+    <None Include="My Project\DataSources\Recipe.Entities.EmpresaEntity.datasource" />
+    <None Include="My Project\DataSources\Recipe.Entities.EnfermedadesEntity.datasource" />
+    <None Include="My Project\DataSources\Recipe.Entities.HistoriasEntity.datasource" />
+    <None Include="My Project\DataSources\Recipe.Entities.TerapiasEntity.datasource" />
+    <None Include="My Project\DataSources\Recipe.Entities.UserEntity.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jeringa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Recipe.BusinessLayer\Recipe.BusinessLayer.vbproj">
+      <Project>{E2284207-23E1-46D3-876C-CEF7AF3C0E70}</Project>
+      <Name>Recipe.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Recipe.Entities\Recipe.Entities.vbproj">
+      <Project>{858B86FB-C25C-4C41-BEC0-3CFA88ED3430}</Project>
+      <Name>Recipe.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubirNube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecipePrescritos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medicina.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
