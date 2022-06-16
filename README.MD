@@ -2,9 +2,9 @@
     <img src="https://github.com/AJ-Wi/AJ-Wi/blob/main/assets/logo_horizontal.png" width="300" title="AJ-Wi">
 </p>
 
-# Multi Control de Historial Clinico (MUltiCHC)
+# Multi Control de Historial Clinico (MUltiCHC v1.0)
 
-Aplicacion para llevar control de historial de pacientes e impresion de recipes medicos.
+Aplicacion para llevar control de historial de pacientes e impresion de recipes medicos, realizado en 2013
 
 ## Requisitos
 
