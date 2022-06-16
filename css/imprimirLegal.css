@@ -1,0 +1,149 @@
+#normal {
+	display: none;
+}
+
+.Vimp {
+	margin-top: 5px;
+	width: 1320px;
+	height: 780px;
+}
+
+.Cimp {
+	height: 740px;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.a {
+	margin-top: 5px;
+}
+
+.Imprimir {
+	background: white;
+	width: 640px;
+	height: 100%;
+	padding: 20px;
+	position: relative;
+}
+
+.Imprimir img {
+	width: 120px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.Imprimir h3 {
+	font-size: 20px;
+}
+
+.Imprimir h4 {
+	font-size: 12px;
+	font-style: bold;
+}
+
+.Imprimir h5 {
+	font-size: 10px;
+}
+
+h5.texto {
+	text-align: justify;
+}
+
+.texto {
+	text-align: left;
+}
+
+.largo {
+	width: 200px;
+	padding-left: 5px;
+	border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.contenido {
+	padding: 0 0 10px 10px;
+}
+
+.contenido2 {
+	height: 350px;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+	overflow-x: hidden;
+	overflow: auto;
+}
+
+.centro {
+	margin-left: -10px;
+	padding: 10px;
+	border-left: 3px solid rgb(0, 0, 0);
+}
+
+.paciente {
+	padding: 10px;
+	margin-bottom: -10px;
+	margin-left: -10px;
+	border: 3px solid rgb(0, 0, 0);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.c {
+	margin-bottom: 10px;
+}
+
+.d {
+	padding-top: 25px;
+}
+
+.conT {
+	height: 460px;
+}
+
+.lineal, .lineal2 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.lineal {
+	margin-top: 10px;
+}
+
+.lineal2 {
+	justify-content: space-between;
+}
+
+.horarios {
+	margin: 10px 20px 0 20px;
+}
+
+.salto {
+	display:none; 
+}
+
+@media print{
+	header, .cabecera, #principal, footer {
+		display: none;
+	}
+
+	.Imprimir {
+		margin-top: -80px;
+	}
+	
+	.contenido2 {
+		height: 520px;
+		overflow: hidden;
+	}
+	
+	.conT {
+		height: 640px;
+		overflow: hidden;
+	}
+	
+	.cuerpo {
+		text-align: center;
+	}
+
+}

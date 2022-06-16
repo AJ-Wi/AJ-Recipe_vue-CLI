@@ -1,0 +1,34 @@
+.ventana {
+	width: 700px;
+	height: 500px;
+}
+
+.cuerpo {
+	height: 460px;
+	text-align: left;
+	padding: 20px;
+}
+
+ul { 	 
+	overflow: auto; 	 
+	border: 1px solid #000; 
+	list-style-type: none;
+	margin: 0; 
+	padding: 5px; 
+	overflow-x: hidden;
+	color: white;
+	height: 420px;
+	width: 660px;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+li {
+	border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+	cursor: pointer;
+	padding: 3px 0;
+}
+
+li:hover {
+	background: rgba(255, 255, 255, 0.8);
+	color: black;
+}

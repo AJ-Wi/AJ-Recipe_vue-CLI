@@ -1,0 +1,157 @@
+#legal {
+	display: none;
+}
+
+.Vimp {
+	margin-top: 5px;
+	width: 700px;
+	height: 810px;
+}
+
+.Cimp {
+	height: 770px;
+	width: 680px;
+	padding: 20px;
+}
+
+.Imprimir {
+	background: white;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	position: relative;
+}
+
+.Imprimir img {
+	width: 120px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.Imprimir h3 {
+	font-size: 20px;
+}
+
+.Imprimir h4 {
+	font-size: 12px;
+	font-style: bold;
+}
+
+.Imprimir h5 {
+	font-size: 10px;
+}
+
+.Imprimir h6 {
+	font-size: 10px;
+}
+
+.enun {
+	width: 60%;
+	margin: 5px 20%;
+	text-align: center;
+}
+
+.web {
+	margin-bottom: 20px;
+}
+
+.texto {
+	text-align: left;
+}
+
+.j {
+	text-align: justify;
+}
+
+.largo {
+	width: 200px;
+	padding-left: 5px;
+	border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.contenido {
+	padding: 0 0 10px 10px;
+	border-bottom: 3px solid rgb(0, 0, 0);
+	border-left: 3px solid rgb(0, 0, 0);
+	border-bottom-left-radius: 10px;
+}
+
+.contenido2 {
+	height: 350px;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+	overflow-x: hidden;
+	overflow: auto;
+}
+
+.conT {
+	height: 620px;
+}
+
+.lineal, .lineal2 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.lineal {
+	margin-top: 10px;
+}
+
+.lineal2 {
+	justify-content: space-between;
+}
+
+.horarios {
+	margin: 10px 10px 0 10px;
+	width: 45%;
+}
+
+.salto {
+	display:none; 
+}
+
+#Imp2, #Imp3 {
+	display: none;
+}
+
+@media print{
+	header, .cabecera, #principal, footer {
+		display: none;
+	}
+	
+	#Imp1, #Imp2, #Imp3 {
+		display: block;
+	}
+	
+	#Imp1 {
+		display: block;
+		margin-top: -80px;
+		height: 85%;
+	}
+	
+	.contenido2 {
+		height: 580px;
+		overflow: hidden;
+	}
+	
+	.contenido {
+		border-bottom-left-radius: 0px;
+	}
+	
+	.conT {
+		height: 820px;
+		overflow: hidden;
+	}
+	
+	.cuerpo {
+		text-align: center;
+	}
+	
+	.salto {
+		display:block; 
+		height: 300px;
+	}
+
+}

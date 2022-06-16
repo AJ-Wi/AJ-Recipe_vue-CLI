@@ -1,0 +1,26 @@
+.ventana {
+	width: 700px;
+	height: 500px;
+}
+
+.cuerpo {
+	height: 460px;
+	text-align: left;
+	padding-left: 20px;
+}
+
+.cuerpo label {
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.cuerpo input[type=text] {
+	width: 320px;
+}
+
+textarea {
+	width: 660px;
+	height: 280px;
+    resize: none;
+}
