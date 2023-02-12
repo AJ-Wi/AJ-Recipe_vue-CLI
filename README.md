@@ -6,7 +6,7 @@
 
 </div>
 
-<img width="400" height="auto" align="right" src="https://github.com/AJ-Wi/AJ-Wi/blob/main/assets/logo_horizontal.png">
+<img width="400" height="auto" align="right" src="https://github.com/wipodev/wipodev/blob/main/assets/logo-main.svg">
 
 App web destinada para registrar historial de pacientes médicos e imprimir los récipes.
 
